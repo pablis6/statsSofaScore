@@ -1,0 +1,71 @@
+pfg-predicciones{
+    width: 340px;
+    margin-right: 20px;
+    margin-left: 10px;
+
+    #predicciones{
+        margin-bottom: 5px;
+    }
+
+    table thead{
+        background-color: #f1f2f5;
+    }
+
+    th{
+        padding: 8px!important;
+        font-family: Roboto,Tahoma,Helvetica,Arial,sans-serif;
+        font-weight: 400!important;
+        font-size: 13.4px;
+    }
+    
+    tbody:hover {
+        background-color: #f1f2f5;
+        cursor: pointer;
+    }
+    
+    table td.hora{
+        width: 50px;
+    }
+    
+    table td.equipo{
+        width: 180px;
+    }
+    
+    table td.resultado{
+        width: 30px;
+    }
+    
+    table td.ganador{
+        width: 30px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    table td.apuesta{
+        width: 50px;
+        font-weight: bold;
+        color: #0b8d68;
+    }
+    
+    table tfoot{
+        background-color: #cacbcd;
+    }
+
+    //colores
+    .colorApuestaVerde{
+        background-color: #64ca3f;
+    }
+    .colorApuestaRojo{
+        background-color: #c1272d;
+    }
+    .colorApuestaGris{
+        background-color: #dce0e4;
+        color: #404040 !important;
+    }
+    .colorGanador{
+        color: #404040;
+    }
+    .colorPerdedor{
+        color: gray !important;
+    }
+}

@@ -1,0 +1,126 @@
+<img ng-show="appController.sofaScoreService.loadingPredicciones || appController.sofaScoreService.loadingStats"
+		src="./images/loading2.gif" alt="Loading" height="150" width="225">
+
+<div id="principal" ng-show="!appController.sofaScoreService.loadingPredicciones && !appController.sofaScoreService.loadingStats">
+        <pfg-predicciones></pfg-predicciones>
+        <pfg-estadisticas></pfg-estadisticas>
+</div>
+
+
+<!-- <img ng-show="sofaScoreCtrl.loadingPredicciones || sofaScoreCtrl.loadingStats"
+		src="./images/loading2.gif" alt="Loading" height="150" width="225">
+
+<div id="principal" ng-show="!sofaScoreCtrl.loadingPredicciones && !sofaScoreCtrl.loadingStats">
+    <div id="col1">
+        <div id="predicciones" ng-repeat="dia in sofaScoreCtrl.misPredicciones">
+            <table>
+                <thead>
+                    <th colspan=2>{{dia.miDia[0].startDateTimestamp | date : 'mediumDate'}}</th>
+                    <th colspan=3 class="text-right">{{dia.miDia.length}} eventos</th>
+                </thead>
+                <tbody ng-click="sofaScoreCtrl.open(prediccion.customId)" ng-repeat="prediccion in dia.miDia">
+                    <tr>
+                        <td rowspan=2 class="hora text-center">{{prediccion.startDateTimestamp | date : 'HH:mm'}}</td>
+                        <td class="equipo">{{prediccion.homeTeamName}}</td>
+                        <td class="resultado text-center"
+                            ng-class="{colorGanador: (prediccion.winnercode == 1 || prediccion.winnercode == 3),
+                                    colorPerdedor: prediccion.winnercode == 2}">
+                            {{prediccion.homeScore.current}}
+                        </td>
+                        <td rowspan=2 class="ganador text-center"
+                            ng-class="{colorApuestaVerde: prediccion.correct == 1,
+                                        colorApuestaRojo: prediccion.correct == 0,
+                                        colorApuestaGris: prediccion.correct == -1}">{{prediccion.vote}}</td>
+                        <td rowspan=2 class="apuesta text-center">{{prediccion.odds.decimalValue}}</td>
+                    </tr>
+                    <tr>
+                        <td class="equipo">{{prediccion.awayTeamName}}</td>
+                        <td class="resultado text-center"
+                            ng-class="{colorGanador: (prediccion.winnercode == 2 || prediccion.winnercode == 3),
+                                    colorPerdedor: prediccion.winnercode == 1}">
+                            {{prediccion.awayScore.current}}
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan=2 class="text-center"><b>correcto/total: {{dia.misStats.countCorrectos}}/{{dia.miDia.length}}</b></td>
+                        <td colspan=3 class="text-center"
+                            ng-class="{colorVerde: dia.misStats.beneficio - dia.miDia.length > 0,
+                                    colorRojo: dia.misStats.beneficio - dia.miDia.length < 0}"><b>beneficio: {{dia.misStats.beneficio - dia.miDia.length | number : 2}}</b></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+
+    <div id="col2">
+        <div>
+            <h1 class="text-center">Predicciones del partido</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan=2 class="text-center colorVerde">Periodo actual (últimos 30 días)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="titulo">Predicciones del partido</td>
+                        <td class="contenido">{{sofaScoreCtrl.miPerfil.voteStatistics.current.total}}</td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Predicciones correctas</td>
+                        <td class="contenido">{{sofaScoreCtrl.miPerfil.voteStatistics.current.correct}} ({{sofaScoreCtrl.miPerfil.voteStatistics.current.percentage}})</td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Valor medio de predicciones correctas</td>
+                        <td class="contenido">{{sofaScoreCtrl.miPerfil.voteStatistics.current.avgCorrectOdds.decimalValue}}</td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Retorno sobre la inversion virtual</td>
+                        <td class="contenido">{{sofaScoreCtrl.miPerfil.voteStatistics.current.roi}}</td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Ranking de predicciones</td>
+                        <td class="contenido">{{sofaScoreCtrl.miPerfil.voteStatistics.current.ranking}}</td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Cambio en el ranking</td>
+                        <td class="contenido">{{sofaScoreCtrl.miPerfil.voteStatistics.current.rankingMove}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan=2 class="text-center colorVerde">Total de las predicciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="titulo">Predicciones del partido</td>
+                        <td>{{sofaScoreCtrl.miPerfil.voteStatistics.allTime.total}}</td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Predicciones correctas</td>
+                        <td>{{sofaScoreCtrl.miPerfil.voteStatistics.allTime.correct}} ({{sofaScoreCtrl.miPerfil.voteStatistics.allTime.percentage}})</td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Valor medio de predicciones correctas</td>
+                        <td>{{sofaScoreCtrl.miPerfil.voteStatistics.allTime.avgCorrectOdds.decimalValue}}</td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Retorno sobre la inversion virtual</td>
+                        <td>{{sofaScoreCtrl.miPerfil.voteStatistics.allTime.roi}}</td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Ranking de predicciones</td>
+                        <td>{{sofaScoreCtrl.miPerfil.voteStatistics.allTime.ranking}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>	 -->

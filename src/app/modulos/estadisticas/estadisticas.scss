@@ -1,0 +1,42 @@
+pfg-estadisticas{
+    width: 340px;
+    margin-right: 10px;
+
+    div{
+        position: fixed;
+    }
+    
+    h1{
+        font-size: 20pt!important;
+        margin-top: 10px!important;
+    }
+    
+    table{
+        width: 340px;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+    
+    table thead th{
+        height: 30px;
+        background-color: #f1f2f5;
+    }
+    
+    table tbody tr{
+        height: 30px;
+    }
+    
+    table tbody tr:hover{
+        cursor: default;
+        background-color: #f1f2f5;
+    }
+    
+    table td.titulo{
+        width: 260px;
+        padding-left: 5px;
+    }
+    
+    table td.contenido{
+        width: 80px;
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "statsSofaScore",
+  "version": "1.0.0",
+  "description": "Mis estadisticas de SofaScore",
+  "scripts": {
+    "build": "npm run bundle && npm run copy:index",
+    "build:min": "npm run bundle:min && npm run copy:index",
+    "bundle": "webpack --progress --colors",
+    "bundle:min": "webpack -p --progress --colors",
+    "copy:index": "cpy \"./index.html\" \"../dist\" --cwd=src --parents",
+    "copy:templates": "cpy \"./**/*.html\" \"../dist\" --cwd=src --parents",
+    "deploy": "npm run build && npm run",
+    "deploy:min": "npm run build:min && npm run",
+    "postinstall": "npm dedupe",
+    "start": "webpack-dev-server --debug --progress --colors --watch --inline --open --port 9003",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Pablo Fernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-component": "^0.1.3",
+    "angular-filter": "^0.5.17",
+    "angular-i18n": "^1.7.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "bower": "^1.8.4",
+    "css-loader": "^1.0.1",
+    "expose-loader": "^0.7.5",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.4.5",
+    "imports-loader": "^0.8.0",
+    "jquery": "^3.3.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "ngtemplate-loader": "^1.3.1",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^3.0.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "resolutions": {}
+}

@@ -1,0 +1,113 @@
+body{
+    background-color: #dce0e4;
+}
+#principal{
+    margin:auto!important;
+    width: 720px;
+    display: flex;
+    background-color: white;
+}
+
+#col1{
+    width: 340px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+#col2{
+    width: 340px;
+    margin-right: 10px;
+}
+
+#col1 #predicciones{
+    margin-bottom: 5px;
+}
+#col1 table thead{
+    background-color: #f1f2f5;
+    
+}
+#col1 th{
+    padding: 8px!important;
+    font-family: Roboto,Tahoma,Helvetica,Arial,sans-serif;
+    font-weight: 400!important;
+    font-size: 13.4px;
+}
+#col1 tbody:hover {
+    background-color: #f1f2f5;
+    cursor: pointer;
+}
+#col1 table td.hora{
+    width: 50px;
+}
+#col1 table td.equipo{
+    width: 180px;
+}
+#col1 table td.resultado{
+    width: 30px;
+}
+#col1 table td.ganador{
+    width: 30px;
+    font-weight: bold;
+    color: white;
+}
+#col1 table td.apuesta{
+    width: 50px;
+    font-weight: bold;
+    color: #0b8d68;
+}
+#col1 table tfoot{
+    background-color: #cacbcd;
+}
+
+.colorApuestaVerde{
+    background-color: #64ca3f;
+}
+.colorApuestaRojo{
+    background-color: #c1272d;
+}
+.colorApuestaGris{
+    background-color: #dce0e4;
+    color: #404040 !important;
+}
+.colorGanador{
+    color: #404040;
+}
+.colorPerdedor{
+    color: gray !important;
+}
+.colorRojo{
+    color: #c1272d
+}
+.colorVerde{
+    color: #64ca3f;
+}
+
+#col2 div{
+    position: fixed;
+}
+#col2 h1{
+    font-size: 20pt!important;
+    margin-top: 10px!important;
+}
+#col2 table{
+    width: 340px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+#col2 table thead th{
+    height: 30px;
+    background-color: #f1f2f5;
+}
+#col2 table tbody tr{
+    height: 30px;
+}
+#col2 table tbody tr:hover{
+    cursor: default;
+    background-color: #f1f2f5;
+}
+#col2 table td.titulo{
+    width: 260px;
+    padding-left: 5px;
+}
+#col2 table td.contenido{
+    width: 80px;
+}

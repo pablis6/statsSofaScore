@@ -1,0 +1,22 @@
+@import '../../bower_components/bootstrap/dist/css/bootstrap.css';
+
+body{
+    background-color: #dce0e4;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+#principal{
+    margin:auto!important;
+    width: 720px;
+    display: flex;
+    background-color: white;
+}
+
+.colorRojo{
+    color: #c1272d
+}
+.colorVerde{
+    color: #64ca3f;
+}

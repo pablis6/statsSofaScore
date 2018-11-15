@@ -1,0 +1,66 @@
+<div>
+        <h1 class="text-center">Predicciones del partido</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan=2 class="text-center colorVerde">Periodo actual (últimos 30 días)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="titulo">Predicciones del partido</td>
+                    <td class="contenido">{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.current.total}}</td>
+                </tr>
+                <tr>
+                    <td class="titulo">Predicciones correctas</td>
+                    <td class="contenido">{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.current.correct}} ({{estadisticasController.sofaScoreService.miPerfil.voteStatistics.current.percentage}})</td>
+                </tr>
+                <tr>
+                    <td class="titulo">Valor medio de predicciones correctas</td>
+                    <td class="contenido">{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.current.avgCorrectOdds.decimalValue}}</td>
+                </tr>
+                <tr>
+                    <td class="titulo">Retorno sobre la inversion virtual</td>
+                    <td class="contenido">{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.current.roi}}</td>
+                </tr>
+                <tr>
+                    <td class="titulo">Ranking de predicciones</td>
+                    <td class="contenido">{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.current.ranking}}</td>
+                </tr>
+                <tr>
+                    <td class="titulo">Cambio en el ranking</td>
+                    <td class="contenido">{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.current.rankingMove}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan=2 class="text-center colorVerde">Total de las predicciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="titulo">Predicciones del partido</td>
+                    <td>{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.allTime.total}}</td>
+                </tr>
+                <tr>
+                    <td class="titulo">Predicciones correctas</td>
+                    <td>{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.allTime.correct}} ({{estadisticasController.sofaScoreService.miPerfil.voteStatistics.allTime.percentage}})</td>
+                </tr>
+                <tr>
+                    <td class="titulo">Valor medio de predicciones correctas</td>
+                    <td>{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.allTime.avgCorrectOdds.decimalValue}}</td>
+                </tr>
+                <tr>
+                    <td class="titulo">Retorno sobre la inversion virtual</td>
+                    <td>{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.allTime.roi}}</td>
+                </tr>
+                <tr>
+                    <td class="titulo">Ranking de predicciones</td>
+                    <td>{{estadisticasController.sofaScoreService.miPerfil.voteStatistics.allTime.ranking}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
